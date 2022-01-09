@@ -7,8 +7,6 @@ import { VacationFilter } from './cmps/Vacation-Filter/VacationFilter';
 import { VacationAddEdit } from './cmps/Vacation-Add-Edit/VacationAddEdit';
 
 
-
-
 export function VacationApp() {
   const [vacations, setvacations] = useState(vacationsData);
   const [filterBy, setfilterBy] = useState({filterNameOrLocation:''});

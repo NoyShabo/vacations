@@ -31,21 +31,21 @@ export function VacationAddEdit({onSaveVacation,selectedVacationEdit, onCancelEd
         setvacation(prevVacation=>({...prevVacation, [field]:value}));
     }
     
-    const myNotify = (txt) => toast.error(txt);
+    const notifyError = (txt) => toast.error(txt);
     
     const save = async (ev)=>{
         ev.preventDefault();        
         if(!vacation.name){
-            return myNotify("Field name is required");
+            return notifyError("Field name is required");
         }
         else if(!vacation.location){
-            return myNotify("Field location is required");
+            return notifyError("Field location is required");
         }
         else if(!vacation.price){
-            return myNotify("Field price is required");
+            return notifyError("Field price is required");
         }
         else if(Number.isNaN(+vacation.price)){
-            return myNotify("Price must be a number");
+            return notifyError("Price must be a number");
         }
         else if(!vacation.imageUrl){
             vacation.imageUrl = 
