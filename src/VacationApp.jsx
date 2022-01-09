@@ -33,7 +33,7 @@ export function VacationApp() {
     if(vacation._id){
       const isVacationStillInList = vacations.some(currVacation=>currVacation._id ===vacation._id);
       if(!isVacationStillInList){
-        return notifyError('Changes not save, This vacation been deleted');
+        return notifyError('Changes not save, because this vacation deleted');
       }
       else setvacations([...vacations.map((currVaction)=>currVaction._id!==vacation._id?currVaction:vacation)],setselectedVacationEdit(null));
     }
