@@ -4,10 +4,9 @@ import {FaTimes} from 'react-icons/fa'
 import {GiCheckMark} from 'react-icons/gi'
 import { useEffect, useState } from 'react';
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
-export function VacationAddEdit({onSaveVacation,selectedVacationEdit, onCancelEditVacation}) {
+
+export function VacationAddEdit({onSaveVacation,selectedVacationEdit, onCancelEditVacation,notifyError}) {
  
     const emptyVacation = {
             name: "",
@@ -30,9 +29,7 @@ export function VacationAddEdit({onSaveVacation,selectedVacationEdit, onCancelEd
         const value = target.value;
         setvacation(prevVacation=>({...prevVacation, [field]:value}));
     }
-    
-    const notifyError = (txt) => toast.error(txt);
-    
+        
     const save = async (ev)=>{
         ev.preventDefault();        
         if(!vacation.name){
@@ -82,7 +79,6 @@ export function VacationAddEdit({onSaveVacation,selectedVacationEdit, onCancelEd
                 {selectedVacationEdit && <button onClick={cancelEdit} className='btn cancelBtn'><FaTimes className='iconCancel'/></button>}
                 
             </form>
-            <ToastContainer />
         </section>
     );
 }

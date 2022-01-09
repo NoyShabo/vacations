@@ -6,6 +6,8 @@ import { useState } from 'react';
 import { VacationFilter } from './cmps/Vacation-Filter/VacationFilter';
 import { VacationAddEdit } from './cmps/Vacation-Add-Edit/VacationAddEdit';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export function VacationApp() {
   const [vacations, setvacations] = useState(vacationsData);
@@ -25,9 +27,15 @@ export function VacationApp() {
     setselectedVacationEdit(vacation);
   }
 
+  const notifyError = (txt) => toast.error(txt);
+
   const onSaveVacation =(vacation)=>{
     if(vacation._id){
-      setvacations([...vacations.map((currVaction)=>currVaction._id!==vacation._id?currVaction:vacation)],setselectedVacationEdit(null));
+      const isVacationStillInList = vacations.some(currVacation=>currVacation._id ===vacation._id);
+      if(!isVacationStillInList){
+        return notifyError('Changes not save, This vacation been deleted');
+      }
+      else setvacations([...vacations.map((currVaction)=>currVaction._id!==vacation._id?currVaction:vacation)],setselectedVacationEdit(null));
     }
     else{
       vacation._id = 'pa'+Date.now()/1000;
@@ -48,13 +56,16 @@ export function VacationApp() {
 
   if(!vacations) return <div className="loading">Loading</div>
   return (
+    <>
     <section className="App">
       <section className='vactions-side-container'>
         <VacationFilter filterBy={filterBy} handelChangeFilter={handelChangeFilter}/>
         <VacationList selectedVacationToEdit={selectedVacationEdit} vacations={loadVacations()} removeVacation={onRemoveVacation} onClickEditVacation={onClickEditVacation} />
       </section>
-      <VacationAddEdit onSaveVacation={onSaveVacation} selectedVacationEdit={selectedVacationEdit} onCancelEditVacation={onCancelEditVacation} />
+      <VacationAddEdit onSaveVacation={onSaveVacation} notifyError={notifyError} selectedVacationEdit={selectedVacationEdit} onCancelEditVacation={onCancelEditVacation} />
     </section>
+      <ToastContainer />
+    </>
   );
 }
 
