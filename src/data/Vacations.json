@@ -1,5 +1,34 @@
 
-[    
+[   {
+    "_id":"dj33j21",
+    "name": "Washington, D.C.",
+    "location": "United States",
+    "price":"1780",
+    "imageUrl":"https://www.planetware.com/photos-large/USNY/usa-best-places-washington.jpg"
+}, {
+    "_id":"sss22d",
+    "name": "Yosemite National Park",
+    "location": "United States",
+    "price":"111230",
+    "imageUrl":"https://www.planetware.com/wpimages/2019/07/usa-best-places-to-visit-california-yosemite-falls.jpg"
+},
+{
+    "_id":"gferss11",
+    "name": "San Francisco",
+    "location": "United States",
+    "price":"15580",
+    "imageUrl":"https://www.planetware.com/photos-large/USNY/usa-best-places-san-francisco.jpg"
+
+},
+{
+    "_id":"gser223e2",
+    "name": "Chicago",
+    "location": "United States",
+    "price":"1580",
+    "imageUrl":"https://www.planetware.com/photos-large/USNY/usa-best-places-chicago.jpg"
+
+}
+,
     {
         "_id":"j1j1",
         "name": "Phi Phi Islands",
@@ -24,41 +53,10 @@
     },
     {
         "_id":"gferfre2",
-        "name": "Kudahuvadhoo Island",
-        "location": "Maldives",
-        "price":"1480",
-        "imageUrl":"http://www.thehappykid.blog/wp-content/uploads/2019/04/phi-phi-1-of-1-1350x680.jpg"
-
-    },
-    {
-        "_id":"dj33j21",
-        "name": "Phi Phi Islands",
-        "location": "Thailands",
-        "price":"1480",
-        "imageUrl":"https://images.squarespace-cdn.com/content/v1/55d08c57e4b0c75c3e1eadee/1500640219805-9ZW3HVEV3NIHLHQ10GUF/Phi+Phi+Viewpoint+-+Thailand?format=750w"
-    },
-    {
-        "_id":"sss22d",
-        "name": "Kudahuvadhoo Island",
-        "location": "Maldives",
-        "price":"1030",
-        "imageUrl":"http://www.thehappykid.blog/wp-content/uploads/2019/04/phi-phi-1-of-1-1350x680.jpg"
-    },
-    {
-        "_id":"gferss11",
-        "name": "Greecevillage",
-        "location": "Maldives",
-        "price":"1480",
-        "imageUrl":"http://www.thehappykid.blog/wp-content/uploads/2019/04/phi-phi-1-of-1-1350x680.jpg"
-
-    },
-    {
-        "_id":"gser223e2",
-        "name": "Kudahuvadhoo Island",
-        "location": "Maldives",
-        "price":"1480",
-        "imageUrl":"http://www.thehappykid.blog/wp-content/uploads/2019/04/phi-phi-1-of-1-1350x680.jpg"
+        "name": "Dubai",
+        "location": "United Arab Emirates",
+        "price":"1230",
+        "imageUrl":"http://cdn.cnn.com/cnnnext/dam/assets/200924183413-dubai-9-1.jpg"
 
     }
-
 ]
