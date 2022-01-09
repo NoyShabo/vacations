@@ -1,0 +1,99 @@
+@function rem($size) {
+    $remSize: $size / 16px;
+    @return ($remSize) * 1rem;
+}
+
+
+.vacation-preview{
+    padding: 0;
+    margin: 0;
+        .textOverFlow {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .title {
+            font-family: Alef;
+            font-style: normal;
+            font-weight: bold;
+            font-size: rem(15.7759px);
+            line-height: 127.7%;
+            color: #353646;
+            margin-bottom: 3px;
+            max-width: 220px;
+        }
+        .location{
+            font-family: Alef;
+            font-style: normal;
+            font-weight: bold;
+            font-size: rem(14px);
+            line-height: 127.7%;
+            text-transform: capitalize;
+            color: #353646;
+            opacity: 0.4;
+            padding-left: 8.31px;
+        }
+        .locationContainerH3{
+            max-width: 140px;
+        }
+        .location-icon{
+            color: #FF6647;           
+        }
+        img{
+            border-radius: 20px;
+            aspect-ratio: 1.574;
+        }
+        .flex{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: rem(3.3986px);           
+        }
+
+        .btnIcon{
+            width: rem(22px);
+            height: rem(22px);
+            transform: scale(0.9);
+            color: #FFFFFF;
+            background: #FF6647;
+            font-size: rem(20px);
+        }
+        .container-image-buttons{
+            padding-bottom: 10px;
+            position: relative;
+        }
+        .deleteBtnContainer{
+            position: absolute;
+            bottom:0;
+            right:rem(10px);
+            height: 35.76px;
+            background: #FF6647;
+            border-radius: 50%;
+            border: 2.10345px solid #FFFFFF;
+            box-shadow: 0px 4.2069px 4.2069px rgba(255, 102, 71, 0.25);
+        }
+        .editBtnContainer{
+            position: absolute;
+            bottom:0;
+            // transform: translateY(-50%);
+            right:rem(48px);
+            height: 35.76px;
+            background: #FF6647;
+            border-radius: 50%;
+            border: 2.10345px solid #FFFFFF;
+            box-shadow: 0px 4.2069px 4.2069px rgba(255, 102, 71, 0.25);
+        }
+        .price{
+            font-family: Alef;
+            font-style: normal;
+            font-weight: bold;
+            font-size: rem(14px);
+            line-height: 127.7%;
+            color: #34A59F;
+            max-width: 70px;
+        }
+
+        .price::before{
+            content: '$';
+        }     
+}

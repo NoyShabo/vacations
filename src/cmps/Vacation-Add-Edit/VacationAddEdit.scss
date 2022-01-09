@@ -1,0 +1,114 @@
+@function rem($size) {
+    $remSize: $size / 16px;
+    @return ($remSize) * 1rem;
+}
+
+.vacation-add-edit{
+    width: 50%;
+    margin: 0;
+    min-height: calc(100vh + 30px);
+    padding: 0;
+    .title{
+        font-family: Alef;
+        font-style: normal;
+        font-weight: normal;
+        font-size: rem(25px);
+        line-height: rem(34px);
+        color: #000001;
+        text-shadow: 0px 2px 80px #FFFFFF;
+        text-align: center;
+    }
+    form{
+        padding:13px 40px 0px 40px;
+        margin: 0 auto;
+        margin-top: 114px;
+        width: 85%;
+        height: rem(537px);        
+        background: #FFFFFF;
+        border-radius: 25px;
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    label{
+        font-family: Alef;
+        font-style: normal;
+        font-weight: bold;
+        font-size: rem(12px);
+        line-height: rem(16px);
+        color: #77787B;
+    }
+
+    input{
+        margin-bottom: rem(25px);
+        width: 95%;
+        background: #F6F7FB;
+        border-radius: 4px;
+        border: none;
+        height: 35px;
+        padding-inline-start: 10px ;
+        position: relative;
+        z-index: 1;
+
+    }
+
+    .backgroundImgOnAddVacation{
+        width: 291px;
+        height: 265px;        
+        position: absolute;
+        z-index: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-image: url(../../assets/images/addEditForm.svg);
+    }
+
+    .btn{
+        box-shadow: 1px 1px 5px 0px #f86549;
+        width: 52px;
+        height: 52px;
+        background: #F86549;
+        border: none;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -50px;
+        transform: translate(-50%, -50%);
+    }
+    .editBtn{
+        left: calc(50% + 30px);
+    }
+    .addBtn{
+        left: 50%;
+    }
+    .cancelBtn{
+        left: calc(50% - 30px);
+    }
+    .iconCancel{
+        padding: 1px;
+        border-radius: 50%;
+        width: 20px;
+        height: 40px;
+        background: #F86549;
+        color: white;
+    }
+    .iconAdd{
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        background: #F86549;
+        color: white;
+    }
+    .iconEdit{
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        color: white;
+    }
+    .iconBtn{
+        border-radius: 50%;
+        width: 32px;
+        height: 50px;
+        background: #F86549;
+        color: white;
+    }
+}

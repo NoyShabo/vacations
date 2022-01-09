@@ -1,0 +1,19 @@
+.App{
+    background: #E5E5E5;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    >*{
+        width: 50%;
+    }
+    .vactions-side-container{
+        width: 50%;
+    }
+    @media screen and (max-width:1118px) {
+        .vactions-side-container{
+            width: 100%;
+        }
+        flex-wrap: wrap;
+    }
+}
