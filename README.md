@@ -4,7 +4,7 @@
 https://vacationapp-app.netlify.app/
 
 ## figma - vacations
-![image](https://user-images.githubusercontent.com/75336643/158353650-14f4aa90-dffe-46a4-93b9-8ad60873a302.png)
+![image](https://user-images.githubusercontent.com/75336643/158354169-c6c742b1-b99a-4466-bda8-02a2388ae347.png)
 
 
 
